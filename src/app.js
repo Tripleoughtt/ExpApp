@@ -16,6 +16,7 @@ const store = configureStore();
 store.dispatch(addExpense({description:'Meme bill', note:'mynote', amount:1020, createdAt:1580500800000}));
 store.dispatch(addExpense({description:'Food bill1st', note:'mynote', createdAt:1577908800000}));
 store.dispatch(addExpense({description:'olddate', note:'mynote', createdAt:1573675200000}));
+store.dispatch(addExpense({description:'completedtest', note:'mynote', createdAt:1573675200000, completed:true}));
 // setTimeout(() => {
 //   //store.dispatch(setTextFilter('Memes'));
 //   console.log(store.getState())

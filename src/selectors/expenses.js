@@ -9,9 +9,13 @@ export default (expenses, {text, sortBy, startDate, endDate}) => {
         return startDateMatch && endDateMatch && textMatch;
     }).sort((a,b) => {
         if (sortBy === 'date'){
-            return a.createdAt < b.createdAt ? 1: -1; //QUESTION HERE
+            return a.createdAt < b.createdAt ? 1: -1;
         }else if (sortBy === 'amount'){
+            console.log("in amount")
             return a.amount < b.amount ? 1: -1;
+        }else if (sortBy === 'alphabetically'){
+            console.log("in here")
+            return a.text < b.text ? 1: -1;
         }
     })
 }

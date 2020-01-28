@@ -4,6 +4,11 @@ export const setTextFilter = (text = '') => ({
     text
 })
 
+export const sortByAlphabetically = () => ({
+    type: 'SORT_BY_ALPHABETICALLY',
+    filter: 'alphabetically'
+})
+
 export const sortByAmount = () => ({
     type: 'SORT_BY_AMOUNT',
     filter: 'amount'

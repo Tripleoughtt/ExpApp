@@ -5,7 +5,8 @@ import uuid from 'uuid'
         description = '', 
         note = '', 
         amount=0, 
-        createdAt=0
+        createdAt=0,
+        completed=false
     }        = {}   
     ) => ({
     type:'ADD_EXPENSE',
@@ -14,7 +15,8 @@ import uuid from 'uuid'
         description,
         note,
         amount,
-        createdAt
+        createdAt,
+        completed
     }
 })
 

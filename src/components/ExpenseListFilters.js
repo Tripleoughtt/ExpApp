@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate} from '../actions/filters';
+import {setTextFilter, sortByAlphabetically, sortByDate, sortByAmount, setStartDate, setEndDate} from '../actions/filters';
 import { addExpense } from '../actions/expenses';
 import { DateRangePicker } from 'react-dates';
 
@@ -31,14 +31,14 @@ render(){
                 case 'amount' : 
                 return this.props.dispatch(sortByAmount());
                 case 'alphabetically': 
-                return this.props.dispatch(addExpense({description:'Alpha', note:'mynote', createdAt:2}));
+                return this.props.dispatch(sortByAlphabetically());
             }
             
         }}>
         <option value='date'>Date</option>
         <option value='amount'>Amount</option>
+        <option value='alphabetically'>Alphabetically</option>
         </select>
-        {console.log(this.props)}
         <DateRangePicker 
         startDate={this.props.filter.startDate}
         startDateId="startDateId"
